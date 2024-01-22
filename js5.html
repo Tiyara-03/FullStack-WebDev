@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript|Manipulation in DOM </title>
+</head>
+<body>
+    <div id="main"  class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact US</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Another container
+    </div>
+
+    <script>
+        let main = document.getElementById('main');
+        console.log(main);
+        let nav = document.getElementById('nav');
+        console.log(nav);
+        let container = document.getElementsByClassName('container');
+        console.log(container);
+
+        // let sel = document.querySelector('#nav>li');
+        // console.log("selectors return", sel);
+
+        let sel = document.querySelectorAll('#nav>li');
+        console.log("selectors return", sel);
+    </script>
+</body>
+</html>

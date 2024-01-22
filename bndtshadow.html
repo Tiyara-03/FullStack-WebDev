@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow and text shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* border: 2px solid red; */
+            background-color: burlywood;
+             /* box-shadow:offset-x offset-y blur radius spread radius color; */
+            box-shadow: 13px 18px 32px 4px;
+            /* box-shadow: inset 3px 5px,inset 6px 9px blueviolet; */
+        }
+        .card h2{
+           text-shadow:-1px 1px 1px white ; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1"><h2>This is  HTML course</h2> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla porro sint ullam, culpa accusantium ab veniam saepe non labore vero animi modi eum sequi aliquam repellendus?</p></div>
+        <div class="card" id="card2"><h2>card2</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, quis.</p></div>
+        <div class="card" id="card3"><h2>card3</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi totam nam itaque impedit voluptatibus voluptates consequuntur repellat quas! Nemo, distinctio?</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cdd grid annd media queries</title>
+</head>
+    <style>
+        .container{
+            display: grid;
+            grid-gap:1rem ;
+            grid-template-areas: 'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+        @media only screen and (max-width:300px){
+            body{
+                background-color: rgb(123, 84, 84);
+            }
+            .container{
+            /* display: grid; */
+            /* grid-gap:1rem ; */
+            grid-template-areas: 'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+
+            'footer footer footer footer';
+        }
+        aside{
+            display: none;
+        }
+            span{
+
+display: block;
+text-align: center;
+}
+        }
+        
+        @media only screen and (max-width:500px) and (min-width:300px){
+            body
+            {
+                background-color: rgb(123, 123, 171)
+                ;
+            }
+            .container{
+            /* display: grid; */
+            /* grid-gap:1rem ; */
+            grid-template-areas: 'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+
+            'footer footer footer footer';
+        }
+        aside{
+            display: none;
+        }
+        span{
+
+display: block;
+text-align: center;
+}
+        }
+        @media(max-width:800px) and (min-width:500px){
+            body{
+                
+                background-color: rgb(185, 164, 164);
+                
+            }
+            .container{
+            /* display: grid; */
+            /* grid-gap:1rem ; */
+            grid-template-areas: 'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+        }
+        span{
+
+            display: block;
+            text-align: center;
+        }
+        }
+        @media(max-width:1000px) and (min-width:800px){
+            body{
+                /* display:block; */
+                background-color: rgb(96, 149, 96);
+                /* color: black; */
+
+            }
+        }
+
+        .bdr{
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+
+    nav{
+        grid-area: navbar;
+
+    }
+     section{
+         grid-area: section; 
+
+    }
+     aside{
+        grid-area: aside;
+    }
+     footer{
+        grid-area: footer;
+        text-align: center;
+    }
+    </style>
+<body>
+    <div class="container">
+      <nav class="bdr">
+        <span>Home</span>
+        <span>About </span>
+        <span>Services</span>
+        <span>Contact Us</span>
+        <!-- <span></span>
+        <span></span> -->
+
+        
+      </nav>
+      <section class="bdr">
+        <h2>learn css grid</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui officia repellat omnis delectus eaque ex fugiat eum assumenda earum beatae esse adipisci, laborum illum doloremque in sapiente! Commodi, qui possimus, architecto quidem rerum sit placeat debitis hic nam doloremque, quisquam incidunt earum doloribus maxime aperiam? Beatae repellat, ullam cum est enim, sed tempora officiis, a magnam doloremque hic! Assumenda sit eveniet possimus sapiente corrupti autem nemo sint molestias minus fuga ad, beatae quam vero nulla. Soluta dolorem ex hic, corporis sequi quasi excepturi quia ratione quam sunt a assumenda libero dicta nesciunt repellendus natus totam culpa animi iste exercitationem commodi.</p>
+      </section>
+      <aside class="bdr"> 
+          <h1> more about us</h1>
+      </aside>
+    </div>
+    <footer class="bdr">
+        Copyright Codewithharry 2024
+    </footer>
+</body>
+</html>

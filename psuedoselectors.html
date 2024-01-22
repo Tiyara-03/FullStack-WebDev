@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after psuedo selctors</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            /* background-size: 100% 100%; */
+            /* background-repeat: no-repeat; */
+        }
+        header::before{
+            background: url("https://plus.unsplash.com/premium_photo-1685053085344-c6171e7ddafa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1856&q=80") no-repeat center center/cover;
+            content:"" ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+
+
+        }
+        .navigation{
+            display: flex;
+            font-size: 20px;
+        }
+        li{
+          list-style: none; 
+          padding: 34px 23px; 
+        }
+        section{
+            height: 200px;
+            /* border: 2px solid aqua; */
+            display: flex;
+            flex-direction: column;
+            margin: 3px 23px;
+            text-align: center;
+            justify-content: center;
+        }
+        section::before{
+            content: "this is a content" ;
+        }
+        h3{
+            display: block;
+            font-size: 3.40em;
+            margin-block-start: 0.40em;
+            margin-block-end: 0.40em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+         
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">home</li>
+                <li class="item">about</li>
+                <li class="item">services</li>
+                <li class="item">contact us</li>
+            </ul>
+        </nav>
+        <section>
+            <h3>welcome to coding world</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, excepturi. Molestias ipsa quis aliquam obcaecati, quam cum, necessitatibus nesciunt quas tenetur corrupti id consequatur voluptatibus quod accusantium facere accusamus minima.
+            </p>
+        </section>
+    </header>
+</body>
+</html> 

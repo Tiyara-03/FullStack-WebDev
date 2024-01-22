@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox tuto</title>
+    <style>
+        .container{
+            height: 300px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            /* padding: 30px; */
+            /* flex-wrap: wrap; */
+            /* flex-flow: row wrap; */
+            /* flex-wrap: wrap-reverse; */
+            justify-content: center;
+            justify-content: space-between;
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+            /* align-items: center; */
+
+
+        }
+        .item{
+            width: 170px;
+            background-color: tomato;
+            border: 2px solid darkcyan;
+            margin: 10px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is head</h1>
+    <div class="container">
+        <div class="item" id="iten1">first box</div>
+        <div class="item" id="iten2">second box</div>
+        <div class="item" id="iten3">thiredbox</div>
+        <div class="item" id="iten4">fourth box</div>
+        <div class="item" id="iten5">fifth box</div>
+        <div class="item" id="iten6">sixth box</div>
+    </div>
+</body>
+</html>

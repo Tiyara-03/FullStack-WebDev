@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript |Alert,Promt,confirm</title>
+
+</head>
+<body>
+    <div class="container">
+        This is a page
+    </div>
+
+    <script>
+        //Alert in-browser Jvascript  Does not return anything
+        // alert("This is a message"); 
+
+
+        //prompt in js
+        // let name = prompt("what is your name?", "Guest");
+        // console.log(name);
+        // console.log(deletePost)
+
+        //confirm in js 
+        let deletePost = confirm("do you realy waht to delet this post?");
+        if(deletePost){
+            //code to delet the post
+            console.log("Your post has been deleted");
+        }
+        else{
+            //code to cancel deletion of the post
+            console.log("Your post has not been deleted");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute and nth child pseudo selecter</title>
+    <style>
+        .container{
+            /* margin: 34px 23px; */
+            width: 233px;
+            margin: auto;
+            display: block;
+            
+
+        }
+
+        input{
+            display: block;
+        }
+        input[type="text"]{
+            padding:23px;
+            border: 2px solid red;
+        }
+        a[target]{
+            font-size: 36px;
+            color: violet;
+
+        }
+        a[target='_self']{
+            font-size:36px ;
+            color: blue;
+
+        }
+         
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1><a href="https://google.com" target="_blank">Go to Google</a></h1>
+        <h1><a href="https://facebook.com" target="_self">Go to Facebook</a></h1>
+        <h1><a href="mailto:tiara26dia37@mail.com">Go to gmail account</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+        <li class="item" id="item1">item1</li>
+        <li class="item" id="item2">item2</li>
+        <li class="item" id="item3">item3</li>
+        <li class="item" id="item4">itwm4</li>
+        <li class="item" id="item5">item5</li>
+    </ul>
+    </div>
+</body>
+</html>
