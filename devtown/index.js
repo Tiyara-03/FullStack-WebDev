@@ -1,6 +1,6 @@
-const fs = require("fs");
+// const fs = require("fs");
 
-fs.copyFileSync("first.txt" , "second.txt");
+// fs.copyFileSync("first.txt" , "second.txt");
 
 const express = require("express");
 const bodyParser = require("body-parser")
@@ -14,7 +14,7 @@ App.get("/", (req,res)=>
 App.post("/", (req, res)=>{
     var n1 = Number(req.body.n1);
     var n2 = Number(req.body.n2);
-    var result = n1+ n2;
+    var result = n1-n2;
     res.send("The answer is" + result);
 } );
 App.listen(3000 ,() => console.log("The server has started running on port 3000 "));
