@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <label id="l1"></label>
+    
+    <script>
+        var day , d = new Date();
+        switch(d.getDay())
+        {
+            case 0:
+                day="sunday";
+                break;
+
+            default:
+                day="saturday";    
+        }
+
+        document.getElementById("l1").innerHTML="hello user happy" +day;
+    </script>
+
+
+</body>
+
+
+</html>

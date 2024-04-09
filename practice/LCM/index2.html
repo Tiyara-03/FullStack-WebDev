@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The LCM</title>
+        <script>
+            function lcm(){
+
+                var a, b, c, i, disp;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+
+                //find max of a and b
+                c = Math.max(a,b);
+
+                //start from max and find a number
+                for(i=c; i<=(a*b); i+=c){
+                    if(i % a === 0 && i % b===0 ){
+                        disp = i;
+                        break;
+                    }
+                }
+                document.getElementById("result").value = disp;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="num1" placeholder="enter num1">
+            <input type="text" id="num2" placeholder="enter num2">
+            <input type="button" value="result" onclick="lcm()">
+            <input type="text" id="result" placeholder="result">
+            <!-- <p id="result"></p> -->
+        </form>
+    </body>
+</html>
