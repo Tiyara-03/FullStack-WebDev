@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizontal Scroll bar</title>
-    <link rel="stylesheet" href="styel.css">
+    <link rel="stylesheet" href="style.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -12,8 +12,8 @@
 </head>
 <body>
     <div class="gallery-wrap">
-        <a href=""><i id="backbtn" class="ri-skip-left-line"></i></a>
-        <div class="gallery">
+        <button onclick="scrollLeft()"><i id="backbtn" class="ri-skip-left-line"></i></button>
+        <div id="gallery">
             <div>
                 <span><img src="images/cleanbrush.jpg" alt=""></span>
                 <span><img src="images/facebrush.jpg" alt=""></span>
@@ -27,27 +27,19 @@
                 <span><img src="images/toothbrush.jpg" alt=""></span>
             </div>
         </div>
-        <a href=""><i id="forwardbtn" class="ri-skip-right-line"></i></a>
+        <button onclick="scrollright()"><i id="forwardbtn" class="ri-skip-right-line"></i></button>
     </div>
 
     <script>
-        // let scrollContainer = document.querySelector(".gallery");
-        // let backbtn = document.getElementById("backbtn");
-        // let forwardbtn = document.getElementById("forwardbtn");
-
-        // scrollContainer.addEventListener("wheel", (evt)=> {
-        //     evt.preventDefault();
-        //     scrollContainer.scrollLeft += evt.deltaY;
-        // });
- 
-        const gallery = document.querySelector(".gallery");
-
-        const dragging = (e) => {
-            carsousel.scrollleft = e.pageX;
-
+        function scrollLeft(){
+            var left = document.getElementById("#gallery");
+            gallery.scrollBy(350, 0)
         }
 
-        gallery.addEventListener("mousemove", dragging);
+        function scrollright(){
+            var right = document.getElementById("#gallery");
+            gallery.scrollBy(-350, 0)
+        }
     </script>
 </body>
 </html>
