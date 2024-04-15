@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getresult(){
+            var name = document.getElementById("name1").value;
+            var phy = parseInt(document.getElementById("phy").value);
+            var chem = parseInt(document.getElementById("chem").value);
+            var maths = parseInt(document.getElementById("maths").value);
+
+            var agreegate = phy + chem + maths;
+            document.getElementById("aggre").innerHTML = agreegate;
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="name1" name="Name" placeholder="Enter your name">
+        <input type="text" id="phy" placeholder="phy">
+        <input type="text" id="chem" placeholder="chem">
+        <input type="tex" id="maths" placeholder="maths">
+        <input type="submit" id="button" value="submit" onclick="getresult()">
+        <!-- <input type="text" id="aggre" placeholder="totalmarks" readonly="true"> -->
+    </form>
+
+    <p id="aggre">total marks is </p>
+
+
+</body>
+</html>
