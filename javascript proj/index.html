@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Proj</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .whole {
+            /* margin: 30px; */
+            background-color: rgb(252, 243, 231);
+        }
+
+        .navbar-brand {
+            margin: 10px 80px;
+        }
+
+        .nav-item {
+            margin: 10px 40px;
+        }
+
+        .d-flex {
+            margin-right: 100px;
+            margin-top: 10px;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+        }
+
+
+        .display {
+            display: flex;
+            /* overflow-x: auto; */
+        }
+
+        li .items {
+            text-decoration: none;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .items img {
+            height: 5rem;
+            width: 6rem;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="whole">
+        <nav class="navbar navbar-expand-lg bg-body-rgb(252, 243, 231)">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">INSENCE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Read</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">View</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="shopsec">
+                <h1>Items</h1>
+                <ul class="display">
+                    <li class="items item-no"><img src="shirt.jpeg" alt="not"></li>
+                    <li class="items item-no"><img src="shirt2.jpeg" alt=""></li>
+                    <li class="items item-no"><img src="pant.jpeg" alt=""></li>
+                    <li class="items item-no"><img src="skirt.jpeg" alt=""></li>
+                    <li class="items item-no"><img src="top.jpeg" alt=""></li>
+                    <li class="items item-no"><img src="shoe.jpeg" alt=""></li>
+
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </div>
 </body>
+
 </html>
