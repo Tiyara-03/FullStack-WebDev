@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizontal Scroll bar</title>
     <link rel="stylesheet" href="styel.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
+
 <body>
     <div class="gallery-wrap">
-        <a href=""><i id="backbtn" class="ri-skip-left-line"></i></a>
+        <a href="#"><i id="backbtn" class="ri-skip-left-line"></i></a>
         <div class="gallery">
             <div>
-                <span><img src="images/cleanbrush.jpg" alt=""></span>
-                <span><img src="images/facebrush.jpg" alt=""></span>
-                <span><img src="images/fancybrush.jpg" alt=""></span>
-                <span><img src="images/woodbrush.jpg" alt=""></span>
-                
+                <span id="pict"><img src="images/cleanbrush.jpg" alt=""></span>
+                <span id="pict"><img src="images/facebrush.jpg" alt=""></span>
+                <span id="pict"><img src="images/fancybrush.jpg" alt=""></span>
+                <span id="pict"><img src="images/woodbrush.jpg" alt=""></span>
+
             </div>
             <div>
-                <span><img src="images/plasticbrush.jpg" alt=""></span>
-                <span><img src="images/shoebrush.jpg" alt=""></span>
-                <span><img src="images/toothbrush.jpg" alt=""></span>
+                <span id="pict"><img src="images/plasticbrush.jpg" alt=""></span>
+                <span id="pict"><img src="images/shoebrush.jpg" alt=""></span>
+                <span id="pict"><img src="images/toothbrush.jpg" alt=""></span>
             </div>
         </div>
-        <a href=""><i id="forwardbtn" class="ri-skip-right-line"></i></a>
+        <a href="#"><i id="forwardbtn" class="ri-skip-right-line"></i></a>
     </div>
 
     <script>
-        // let scrollContainer = document.querySelector(".gallery");
-        // let backbtn = document.getElementById("backbtn");
-        // let forwardbtn = document.getElementById("forwardbtn");
+        let scrollContainer = document.querySelector(".gallery");
+        let backbtn = document.getElementById("backbtn");
+        let forwardbtn = document.getElementById("forwardbtn");
 
-        // scrollContainer.addEventListener("wheel", (evt)=> {
-        //     evt.preventDefault();
-        //     scrollContainer.scrollLeft += evt.deltaY;
-        // });
- 
+        scrollContainer.addEventListener("wheel", (evt)=> {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaX;
+
+        });
+
+            forwardbtn.onclick = () => {
+            console.log("Forward button is clicked");
+            scrollContainer.scrollLeft += 100; // Adjust the value as needed
+        };
+
+        // Click event for back button
+            backbtn.onclick = () => {
+            console.log("Back button is clicked");
+            scrollContainer.scrollLeft -= 100; // Adjust the value as needed
+        };
+
+        // one way and another way 
+
         // const gallery = document.querySelector(".gallery");
 
         // const dragging = (e) => {
@@ -48,6 +61,28 @@
         // }
 
         // gallery.addEventListener("mousemove", dragging);
+
+        let scroll = document.querySelector(".gallery");
+        let img = document.querySelector("#pict")
+        let forscroll = document.querySelector("#forwardbtn");
+        let bckscroll = document.querySelector("#backbtn");
+
+        forscroll.onclick = () =>{
+            console.log("forscroll is clicked");
+            scroll.scrollLeft += 300;
+
+            
+        }
+
+        bckscroll.onclick = () =>{
+            console.log("bckscroll is clicked");
+            scroll.scrollLeft -= 300;
+            
+        }
+
+
+
     </script>
 </body>
+
 </html>

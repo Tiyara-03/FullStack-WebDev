@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizontal Scroll bar</title>
     <link rel="stylesheet" href="style.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    
 </head>
 <body>
     <div class="gallery-wrap">
-        <button onclick="scrollLeft()"><i id="backbtn" class="ri-skip-left-line"></i></button>
+        <button onclick="scrolleft()"><i id="backbtn" class="ri-skip-left-line"></i></button>
         <div id="gallery">
             <div>
                 <span><img src="images/cleanbrush.jpg" alt=""></span>
@@ -31,14 +29,15 @@
     </div>
 
     <script>
-        function scrollLeft(){
+        function scrolleft() {
+            console.log ("event is good");
             var left = document.getElementById("#gallery");
-            gallery.scrollBy(350, 0)
+            gallery.scrollBy(-360, 0)
         }
 
         function scrollright(){
             var right = document.getElementById("#gallery");
-            gallery.scrollBy(-350, 0)
+            gallery.scrollBy(360, 0)
         }
     </script>
 </body>
