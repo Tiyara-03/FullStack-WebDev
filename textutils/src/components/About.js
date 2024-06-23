@@ -16,16 +16,16 @@ export default function About() {
                 color: 'black',
                 backgroundColor: 'white',
             })
-            setBtnText("Enable Light Mode")
+            setBtnText("Enable dark Mode")
         }
         else{
             setStyle({
                 color: 'white',
-                backgroundColor: 'black',
-                border: '2px solid white'
+                backgroundColor: 'rgb(75, 82, 88)',
+                // border: '2px solid white'
             })
 
-            setBtnText("Enable Dark Mode");
+            setBtnText("Enable light Mode");
         }
     }
     return (

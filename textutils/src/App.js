@@ -10,6 +10,11 @@ function App() {
   const [ mode, setMode] = useState('light');
   const[alert, setAlert] = useState(null);
 
+
+  const showAlert = (message, type)=>{
+     
+  }
+
   const toggleMode = () =>{
     if(mode === 'light'){
       setMode('dark')
