@@ -7,23 +7,29 @@ import { useState } from 'react';
 import Alert from './components/Alert';
 
 function App() {
-  const [ mode, setMode] = useState('light');
-  const[alert, setAlert] = useState(null);
+  const [ mode, setMode] = useState('light'); 
+  const[alert, setAlert] = useState(null);  //state for alert
 
 
-  const showAlert = (message, type)=>{
-     
+  const showAlert = (message, type)=>{       //Method to show alert messages
+     setAlert({ 
+      msg: message,
+      type: type
+     })
   }
 
   const toggleMode = () =>{
     if(mode === 'light'){
       setMode('dark')
       document.body.style.backgroundColor = "rgb(24 35 45)";
+      showAlert("Dark Mode Enabled", "Success");
 
     }
     else{
       setMode('light')
       document.body.style.backgroundColor = "white";
+      showAlert("Light Mode Enables", "Success");
+
     }
   }
 
@@ -31,7 +37,8 @@ function App() {
     <>
       {/* <Navbar title="TextUtils" aboutText="About TextUtils"/>  */}
       <Navbar title="textUtils" mode={mode} toggleMode = {toggleMode}/>
-      <Alert alert="This is alert" />
+      {/* {alert} it is state variable for passing the value in alert state */}
+      <Alert alert={alert}/>        
       <div className="container my-3">
       <Textform heading=" Enter the text to analyse below" mode={mode}/>
       </div>
