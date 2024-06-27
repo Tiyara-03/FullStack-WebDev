@@ -22,13 +22,13 @@ function App() {
     if(mode === 'light'){
       setMode('dark')
       document.body.style.backgroundColor = "rgb(24 35 45)";
-      showAlert("Dark Mode Enabled", "Success");
+      showAlert("Dark Mode Enabled", "success");
 
     }
     else{
       setMode('light')
       document.body.style.backgroundColor = "white";
-      showAlert("Light Mode Enables", "Success");
+      showAlert("Light Mode Enables", "success");
 
     }
   }
@@ -40,7 +40,7 @@ function App() {
       {/* {alert} it is state variable for passing the value in alert state */}
       <Alert alert={alert}/>        
       <div className="container my-3">
-      <Textform heading=" Enter the text to analyse below" mode={mode}/>
+      <Textform showAlert={showAlert} heading=" Enter the text to analyse below" mode={mode}/>
       </div>
       <About />
 
